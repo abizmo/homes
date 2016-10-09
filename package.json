@@ -1,0 +1,19 @@
+{
+  "name": "homes",
+  "version": "0.0.0",
+  "description": "A webapp where i can register and show my selling list of houses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abizmo/Homes.git"
+  },
+  "author": "abizmo <abizmo@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abizmo/Homes/issues"
+  },
+  "homepage": "https://github.com/abizmo/Homes#readme"
+}
