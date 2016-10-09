@@ -93,7 +93,7 @@ exports.destroy = function(req, res){
     } else {
       res.status(200);
       res.json({
-        msg : 'House updated!'
+        msg : 'House removed!'
       });
     }
   });
