@@ -2,9 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <base href="/"/>
     <title>Welcome Homes</title>
   </head>
-  <body>
-    <h1>Welcome <%= title %></h1>
+  <body ng-app="homesApp">
+    <navbar></navbar>
+    <main ng-view="">
+    </main>
+    <footer></footer>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/houses/houses.controller.js"></script>
+    <script src="app/houses/houses.js"></script>
+
   </body>
 </html>

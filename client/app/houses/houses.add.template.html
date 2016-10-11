@@ -1,0 +1,10 @@
+<form ng-submit="addHouse()">
+  <input type="text" name="title" placeholder="Título" ng-model="house.title">
+  <textarea name="description" placeholder="Descripción" ng-model="house.description"></textarea>
+  <input type="number" name="price" placeholder="0" ng-model="house.price">
+  <input type="text" name="phone" placeholder="34666666666" ng-model="house.phone">
+  <input type="text" name="owner" placeholder="Nombre del propietario" ng-model="house.owner">
+  <label for="reserve"></label><input type="checkbox" name="reserve" id="reserve" ng-model="house.reserve">
+  <label for="sold"></label><input type="checkbox" name="sold" id="sold" ng-model="house.sold">
+  <input type="submit" name="name" value="Añadir">
+</form>

@@ -1,0 +1,9 @@
+<h1>Lista de Casas</h1>
+<ul>
+  <li ng-repeat="house in houses">
+    <p>{{ house.title }}</p>
+    <p>{{ house.price }}</p>
+    <a href="/houses/{{ house._id }}">Ver detalle</a>
+  </li>
+</ul>
+<a href="/addhouse">Añadir Casa</a>
