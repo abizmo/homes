@@ -12,8 +12,11 @@ angular.module('homesApp')
         console.log(err);
       });
   }])
-  .controller('ShowCtrl', ['$scope', '$http', '$routeParams', function ($scope, $http, $routeParams) {
+  .controller('ShowCtrl', ['$scope', '$http', '$routeParams', '$location', function ($scope, $http, $routeParams, $location) {
     $scope.house = {};
+    $scope.edit = false;
+    var houseInfo = {};
+
     $http.get('/api/houses/' + $routeParams.id)
       .success(function (response) {
         $scope.house = response;
@@ -21,6 +24,39 @@ angular.module('homesApp')
       .error(function (err) {
         console.log(err);
       });
+
+    $scope.delete = function (id) {
+      console.log(id);
+      $http.delete('/api/houses/' + id)
+        .success(function (response) {
+          $location.path('/');
+        })
+        .error(function (err) {
+          console.log(err);
+        });
+    };
+
+    $scope.editHouse = function () {
+      $scope.edit = true;
+      houseInfo = Object.assign({}, $scope.house);
+    };
+
+    $scope.cancelEditHouse = function () {
+      $scope.house = Object.assign({}, houseInfo);
+      $scope.edit = false;
+    };
+
+    $scope.saveEditHouse = function (house) {
+      $http.put('/api/houses/' + house._id, house)
+        .success(function (response) {
+          $scope.edit = false;
+          houseInfo = '';
+        })
+        .error(function (err) {
+          $scope.edit = false;
+          $scope.house = Object.assign({}, houseInfo);
+        });
+    };
   }])
   .controller('AddCtrl', ['$scope', '$http', '$location', function ($scope, $http, $location) {
     $scope.house = {};

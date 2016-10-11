@@ -16,8 +16,10 @@ exports.index = function(req, res){
 exports.create = function(req, res){
   const house = req.body;
 
-  house.reserve = false;
-  house.sold = false;
+  if (!house.reserve)
+    house.reserve = false;
+  if (!house.sold)
+    house.sold = false;
 
   House.create(house, function (err, house) {
     if (err) {
@@ -66,8 +68,12 @@ exports.update = function(req, res){
         house.owner = req.body.owner;
       if (req.body.reserve)
         house.reserve = req.body.reserve;
+      else
+        house.reserve = false;
       if (req.body.sold)
         house.sold = req.body.sold;
+      else
+        house.sold = false;
       house.save(function(err) {
         if (err) {
           res.status(500);

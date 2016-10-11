@@ -1,4 +1,23 @@
-<ul>
+<ul ng-hide="edit">
   <li>{{ house.title }}</li>
+  <li>{{ house.description }}</li>
+  <li>{{ house.price }}</li>
+  <li>{{ house.phone }}</li>
+  <li>{{ house.owner }}</li>
+  <li>{{ house.reserve }}</li>
+  <li>{{ house.sold }}</li>
 </ul>
+<form ng-show="edit">
+  <input type="text" name="title" ng-model="house.title">
+  <textarea name="description" ng-model="house.description"></textarea>
+  <input type="number" name="price" ng-model="house.price">
+  <input type="text" name="phone" ng-model="house.phone">
+  <input type="text" name="owner" ng-model="house.owner">
+  <label for="reserve">Reserava?</label><input type="checkbox" name="reserve" id="reserve" ng-model="house.reserve">
+  <label for="sold">Vendida?</label><input type="checkbox" name="sold" id="sold" ng-model="house.sold">
+  <input type="button" name="save" value="Guardar" ng-click='saveEditHouse(house)'>
+  <input type="button" name="cancel" value="Cancelar" ng-click='cancelEditHouse()'>
+</form>
 <a href="/">Atras</a>
+<button ng-click="editHouse()">Editar
+<button ng-click='delete(house._id)'>Borrar
