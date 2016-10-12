@@ -1,12 +1,14 @@
-'use strict';
+(function(){
+  'use strict';
 
-angular.module('homesApp', [
-  'ngRoute'
-])
-  .config(function ($routeProvider, $locationProvider) {
-    $routeProvider.otherwise({
-      redirectTo: '/houses'
-    });
+  angular.module('homesApp', [
+    'ngRoute'
+  ])
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+      $routeProvider.otherwise({
+        redirectTo: '/houses'
+      });
 
-    $locationProvider.html5Mode(true);
-  });
+      $locationProvider.html5Mode(true);
+    }]);
+})();

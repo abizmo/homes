@@ -31,7 +31,7 @@ exports.default = function (app) {
   app.use(methodOverride());
 
   // views
-  app.set('views', path.join(app.get('appPath'),'app'));
+  app.set('views', path.join(app.get('appPath'),'views'));
   app.engine('html', require('ejs').renderFile);
   app.set('view engine', 'html');
 };

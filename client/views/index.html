@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <base href="/"/>
     <title>Welcome Homes</title>
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../dist/index.css">
+    <!-- endinject -->
+
   </head>
   <body ng-app="homesApp">
     <navbar></navbar>
@@ -12,9 +17,10 @@
     <footer></footer>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/houses/houses.controller.js"></script>
-    <script src="app/houses/houses.js"></script>
+
+    <!-- inject:js -->
+    <script src="../dist/app.min.js"></script>
+    <!-- endinject -->
 
   </body>
 </html>
