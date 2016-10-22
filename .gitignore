@@ -38,3 +38,6 @@ jspm_packages
 
 # bower_components
 client/bower_components
+
+client/dist/app.min.js
+client/dist/index.css

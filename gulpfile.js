@@ -27,7 +27,7 @@ gulp.task('watch-js', function () {
 });
 
 gulp.task('compile-sass', function () {
-  gulp.src(['client/sass/index.sass'])
+  gulp.src(['client/sass/**/*.sass'])
     .pipe(sassLint())
     .pipe(sassLint.format())
     .pipe(sassLint.failOnError())
