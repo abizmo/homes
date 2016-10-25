@@ -54,7 +54,7 @@ gulp.task('serve', ['nodemon'], function () {
     port: 7000,
 	});
 
-  gulp.watch(['client/sass/*.sass', 'client/sass/**/*.sass'], ['compile-sass']);
+  gulp.watch(['client/sass/**/*.sass'], ['compile-sass']);
   gulp.watch(['client/views/*.html', 'client/views/**/*.html']).on('change', reload);
 });
 
