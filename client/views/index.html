@@ -20,7 +20,8 @@
           <a href="#" class="nav-item">Areas</a>
           <a href="#" class="nav-item">Contact</a>
         </div>
-        <a href="#" class="btn btn-login">Admin</a>
+        <a href="/login" class="btn btn-login" ng-hide="user">Log In</a>
+        <a href="/logout" class="btn btn-login" ng-show="user">Log Out</a>
       </header>
       <main ng-view="">
       </main>
