@@ -38,3 +38,144 @@
 
     a
       margin-right: calc(-665px)
+
+  .hero-filter
+    height: 100%
+    width: calc(1398px - 1050px)
+    background-image: url('img/dunas.png')
+    background-size: auto
+    background-repeat: no-repeat
+    background-position: center
+    text-align: center
+    position: relative
+
+    .blur
+      height: 100%
+      width: 100%
+      background-color: rgba(18, 98, 180, .55)
+      position: absolute
+      top: 0
+      left: 0
+
+    form
+      position: relative
+      padding: 92px 74px
+
+      .form-group
+        margin-bottom: 35px
+        display: flex
+        flex-direction: column
+
+        label
+          text-align: left
+          font-size: 1rem
+          font-weight: 700
+          letter-spacing: 2px
+          margin-bottom: 10px
+          line-height: 19px
+          color: $secondary
+          text-shadow: 0 2px 4px rgba(0, 0, 0, .5)
+
+        select
+          background: $secondary url('img/listBoxBG.png') no-repeat scroll 167px center
+          color: $primary
+          width: 200px
+          border-radius: 0px
+          border: none
+          font-size: 1rem
+          font-weight: 400
+          letter-spacing: 2px
+          line-height: 19px
+          padding: 15px
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .8)
+
+        input[type=range]
+          -webkit-appearance: none
+          width: 100%
+          background: transparent
+
+        input[type=range]:focus
+          outline: none
+
+        input[type=range]::-ms-track
+          width: 100%
+          cursor: pointer
+
+          /* Hides the slider so custom styles can be added */
+          background: transparent
+          border-color: transparent
+          color: transparent
+
+        input[type=range]::-webkit-slider-thumb
+          -webkit-appearance: none
+          border: none
+          height: 30px
+          width: 20px
+          border-radius: 15px
+          background: $primary
+          cursor: pointer
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, .8)
+          margin-top: -8px
+
+        /* All the same stuff for Firefox */
+        input[type=range]::-moz-range-thumb
+          border: none
+          height: 30px
+          width: 20px
+          border-radius: 15px
+          background: $primary
+          cursor: pointer
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, .8)
+
+        /* All the same stuff for IE */
+        input[type=range]::-ms-thumb
+          border: none
+          height: 30px
+          width: 20px
+          border-radius: 15px
+          background: $primary
+          cursor: pointer
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, .8)
+
+        input[type=range]::-webkit-slider-runnable-track
+          width: 100%
+          height: 15px
+          cursor: pointer
+          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .8)
+          background: $secondary
+          border-radius: 15px
+          border: none
+          margin-top: 8px
+
+        input[type=range]::-moz-range-track
+          width: 100%
+          height: 15px
+          cursor: pointer
+          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .8)
+          background: $secondary
+          border-radius: 15px
+          border: none
+
+        input[type=range]::-ms-track
+          width: 100%
+          height: 15px
+          cursor: pointer
+          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .8)
+          background: $secondary
+          border-radius: 15px
+          border: none
+
+        input[type=range]::-ms-fill-lower
+          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .8)
+          background: $secondary
+          border-radius: 15px
+          border: none
+
+        input[type=range]::-ms-fill-upper
+          box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .8)
+          background: $secondary
+          border-radius: 15px
+          border: none
+
+      input[type=submit]
+        margin-top: 35px
